@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IconicStyle Interiors — Interior Designing Company</title>
+<meta name="description" content="IconicStyle Interiors — bespoke interior design. View our work and get a free quote on WhatsApp or call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --yellow: #FFDE59;
+    --yellow-deep: #F2C927;
+    --cream: #FFF8E1;
+    --charcoal: #1F1D1B;
+    --grey: #6B675F;
+    --grey-light: #E8E6E1;
+    --white: #FFFFFF;
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
+
+    --max-w: 1180px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    font-family: var(--font-body);
+    color: var(--charcoal);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+
+  :focus-visible{
+    outline: 3px solid var(--charcoal);
+    outline-offset: 3px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--white);
+    border-bottom: 1px solid var(--grey-light);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 14px 28px;
+    max-width: var(--max-w);
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+  }
+  .brand img{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    object-fit:cover;
+  }
+  .brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+  .brand-text strong{
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+  }
+  .brand-text span{
+    font-size:0.68rem;
+    color: var(--grey);
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+  nav.links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+  }
+  nav.links a{
+    text-decoration:none;
+    font-size:0.92rem;
+    font-weight:500;
+    color: var(--charcoal);
+    position:relative;
+  }
+  nav.links a::after{
+    content:"";
+    position:absolute;
+    left:0; bottom:-6px;
+    width:0%;
+    height:2px;
+    background: var(--yellow-deep);
+    transition: width .25s ease;
+  }
+  nav.links a:hover::after{ width:100%; }
+
+  .nav-cta{
+    background: var(--charcoal);
+    color: var(--white) !important;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight:600 !important;
+    font-size:0.85rem !important;
+    text-decoration:none;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:#3a3631; }
+
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:6px;
+  }
+  .menu-toggle span{
+    display:block;
+    width:24px;
+    height:2px;
+    background:var(--charcoal);
+    margin:5px 0;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background: var(--cream);
+    position:relative;
+    overflow:hidden;
+    padding: 88px 0 96px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-120px; right:-120px;
+    width:420px; height:420px;
+    border-radius:50%;
+    background: var(--yellow);
+    opacity:0.55;
+    z-index:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    bottom:-160px; left:-90px;
+    width:320px; height:320px;
+    border-radius:50%;
+    border: 2px solid var(--yellow-deep);
+    opacity:0.4;
+    z-index:0;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color: var(--charcoal);
+    background: var(--yellow);
+    padding:7px 14px 7px 10px;
+    border-radius:999px;
+    margin-bottom:22px;
+  }
+  .eyebrow .dot{
+    width:7px; height:7px;
+    border-radius:50%;
+    background: var(--charcoal);
+  }
+  h1.hero-title{
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+    line-height:1.04;
+    letter-spacing:-0.015em;
+    margin-bottom:22px;
+  }
+  h1.hero-title em{
+    font-style:italic;
+    font-weight:500;
+    color: var(--yellow-deep);
+    -webkit-text-stroke: 0.6px var(--charcoal);
+  }
+  .hero p.lead{
+    font-size:1.08rem;
+    color: var(--grey);
+    max-width: 480px;
+    margin-bottom: 34px;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding: 15px 26px;
+    border-radius: 999px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.95rem;
+    border: 2px solid transparent;
+    cursor:pointer;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn-primary{
+    background: var(--charcoal);
+    color: var(--white);
+  }
+  .btn-primary:hover{ background:#3a3631; }
+  .btn-secondary{
+    background: transparent;
+    border-color: var(--charcoal);
+    color: var(--charcoal);
+  }
+  .btn-secondary:hover{ background: var(--charcoal); color:var(--white); }
+
+  .hero-badge-wrap{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .hero-circle{
+    width: min(360px, 90%);
+    aspect-ratio:1;
+    border-radius:50%;
+    background: var(--yellow);
+    border: 3px solid var(--charcoal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow: 0 30px 60px -20px rgba(31,29,27,0.35);
+  }
+  .hero-circle img{
+    width:62%;
+  }
+  .hero-stat{
+    position:absolute;
+    background: var(--white);
+    border: 2px solid var(--charcoal);
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-size:0.8rem;
+    line-height:1.2;
+  }
+  .hero-stat strong{
+    display:block;
+    font-family: var(--font-display);
+    font-size:1.35rem;
+    font-weight:600;
+  }
+  .hero-stat.stat-1{ top: 6%; left: -6%; }
+  .hero-stat.stat-2{ bottom: 4%; right: -8%; }
+
+  /* ---------- SECTION LABELS ---------- */
+  .section{
+    padding: 88px 0;
+  }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom: 48px;
+    flex-wrap:wrap;
+  }
+  .section-label{
+    font-size:0.78rem;
+    font-weight:700;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color: var(--yellow-deep);
+    margin-bottom:10px;
+    display:block;
+  }
+  h2.section-title{
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    letter-spacing:-0.01em;
+    max-width: 560px;
+  }
+  .section-desc{
+    max-width: 380px;
+    color: var(--grey);
+    font-size:0.98rem;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services{
+    background: var(--white);
+  }
+  .service-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--grey-light);
+    border: 1px solid var(--grey-light);
+    border-radius: 18px;
+    overflow:hidden;
+  }
+  .service-card{
+    background: var(--white);
+    padding: 36px 28px;
+    transition: background .2s ease;
+  }
+  .service-card:hover{
+    background: var(--cream);
+  }
+  .service-icon{
+    width:46px; height:46px;
+    border-radius:50%;
+    background: var(--yellow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size:1.1rem;
+  }
+  .service-card h3{
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size:1.15rem;
+    margin-bottom:10px;
+  }
+  .service-card p{
+    font-size:0.9rem;
+    color: var(--grey);
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery{
+    background: var(--cream);
+  }
+  .gallery-toolbar{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom: 36px;
+  }
+  .filter-btn{
+    padding: 9px 18px;
+    border-radius:999px;
+    border: 1.5px solid var(--charcoal);
+    background: transparent;
+    font-size:0.85rem;
+    font-weight:600;
+    cursor:pointer;
+    transition: all .18s ease;
+  }
+  .filter-btn.active, .filter-btn:hover{
+    background: var(--charcoal);
+    color: var(--white);
+  }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 14px;
+  }
+  .gallery-item{
+    position:relative;
+    border-radius: 14px;
+    overflow:hidden;
+    cursor:pointer;
+    background: var(--grey-light);
+    border: 2px solid var(--charcoal);
+  }
+  .gallery-item img{
+    width:100%; height:100%;
+    object-fit:cover;
+    transition: transform .35s ease;
+  }
+  .gallery-item:hover img{ transform: scale(1.06); }
+  .gallery-item .tag{
+    position:absolute;
+    bottom:10px; left:10px;
+    background: var(--yellow);
+    border: 1.5px solid var(--charcoal);
+    color: var(--charcoal);
+    font-size:0.7rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    padding: 5px 11px;
+    border-radius:999px;
+  }
+  .gallery-item.big{ grid-column: span 2; grid-row: span 2; }
+
+  .gallery-empty{
+    grid-column: 1 / -1;
+    text-align:center;
+    padding: 60px 20px;
+    border: 2px dashed var(--grey);
+    border-radius: 16px;
+    color: var(--grey);
+  }
+
+  .gallery-cta{
+    text-align:center;
+    margin-top: 40px;
+  }
+
+  /* lightbox */
+  .lightbox{
+    position:fixed; inset:0;
+    background: rgba(31,29,27,0.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:200;
+    padding: 30px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-width:90vw;
+    max-height:85vh;
+    border-radius: 10px;
+  }
+  .lightbox-close{
+    position:absolute;
+    top:24px; right:28px;
+    background: var(--yellow);
+    border: 2px solid var(--charcoal);
+    width:42px; height:42px;
+    border-radius:50%;
+    font-size:1.1rem;
+    cursor:pointer;
+    font-weight:700;
+  }
+
+  /* ---------- ABOUT STRIP ---------- */
+  .about{
+    background: var(--charcoal);
+    color: var(--white);
+  }
+  .about .section-label{ color: var(--yellow); }
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items:center;
+  }
+  .about h2{
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+    line-height:1.18;
+    margin-bottom:20px;
+  }
+  .about p{
+    color: #C9C6C0;
+    margin-bottom:16px;
+    font-size:0.98rem;
+  }
+  .about-points{
+    list-style:none;
+    margin-top:24px;
+    display:grid;
+    gap:14px;
+  }
+  .about-points li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    font-size:0.92rem;
+    color: #E8E6E1;
+  }
+  .about-points li::before{
+    content:"";
+    width:8px; height:8px;
+    border-radius:50%;
+    background: var(--yellow);
+    margin-top:7px;
+    flex-shrink:0;
+  }
+  .about-figure{
+    border-radius: 20px;
+    border: 2px solid var(--yellow);
+    padding: 36px;
+    background: #2A2723;
+    text-align:center;
+  }
+  .about-figure .num{
+    font-family: var(--font-display);
+    font-size: 3.2rem;
+    font-weight:600;
+    color: var(--yellow);
+    line-height:1;
+  }
+  .about-figure-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .about-figure-grid .label{
+    font-size:0.78rem;
+    color:#C9C6C0;
+    margin-top:6px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background: var(--yellow);
+  }
+  .contact-inner{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items:center;
+  }
+  .contact h2{
+    font-family: var(--font-display);
+    font-weight:600;
+    font-size: clamp(2rem, 3.4vw, 2.8rem);
+    line-height:1.1;
+    margin-bottom:18px;
+  }
+  .contact p.lead{
+    color:#4a4334;
+    font-size:1.02rem;
+    max-width:460px;
+    margin-bottom: 30px;
+  }
+  .contact-card{
+    background: var(--white);
+    border: 2px solid var(--charcoal);
+    border-radius: 22px;
+    padding: 38px;
+  }
+  .contact-card h3{
+    font-family: var(--font-display);
+    font-size:1.3rem;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .contact-card p{
+    color: var(--grey);
+    font-size:0.9rem;
+    margin-bottom: 26px;
+  }
+  .quote-actions{
+    display:grid;
+    gap:14px;
+  }
+  .quote-btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.98rem;
+    border: 2px solid var(--charcoal);
+    transition: transform .18s ease;
+  }
+  .quote-btn:hover{ transform: translateY(-2px); }
+  .quote-btn.whatsapp{
+    background: var(--charcoal);
+    color: var(--white);
+  }
+  .quote-btn.call{
+    background: var(--white);
+    color: var(--charcoal);
+  }
+  .quote-icon{
+    width:36px; height:36px;
+    border-radius:50%;
+    background: var(--yellow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .quote-icon svg{ width:18px; height:18px; }
+  .quote-btn.whatsapp .quote-icon svg path{ fill:var(--charcoal); }
+  .quote-btn small{
+    display:block;
+    font-weight:400;
+    font-size:0.78rem;
+    opacity:0.75;
+    margin-top:2px;
+  }
+  .insta-line{
+    margin-top:22px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:0.88rem;
+    color: var(--grey);
+    text-decoration:none;
+    width: fit-content;
+  }
+  .insta-line strong{ color: var(--charcoal); }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background: var(--charcoal);
+    color: #C9C6C0;
+    padding: 36px 0;
+    font-size:0.85rem;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  footer a{ color: var(--yellow); text-decoration:none; }
+
+  /* ---------- ADMIN / UPLOAD ---------- */
+  .admin-toggle{
+    position:fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index:100;
+    background: var(--charcoal);
+    color: var(--white);
+    border: none;
+    border-radius: 999px;
+    padding: 13px 20px;
+    font-size:0.82rem;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow: 0 12px 28px -10px rgba(0,0,0,0.4);
+  }
+  .admin-panel{
+    position:fixed;
+    inset:0;
+    background: rgba(31,29,27,0.6);
+    display:none;
+    align-items:flex-end;
+    justify-content:center;
+    z-index:300;
+  }
+  .admin-panel.open{ display:flex; }
+  .admin-sheet{
+    background: var(--white);
+    width:100%;
+    max-width: 640px;
+    border-radius: 22px 22px 0 0;
+    padding: 34px 32px 40px;
+    max-height: 85vh;
+    overflow-y:auto;
+  }
+  @media (min-width: 720px){
+    .admin-panel{ align-items:center; }
+    .admin-sheet{ border-radius: 22px; }
+  }
+  .admin-sheet h3{
+    font-family: var(--font-display);
+    font-size:1.4rem;
+    margin-bottom:6px;
+  }
+  .admin-sheet p.note{
+    color: var(--grey);
+    font-size:0.85rem;
+    margin-bottom: 24px;
+  }
+  .admin-sheet label{
+    display:block;
+    font-size:0.85rem;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .upload-zone{
+    border: 2px dashed var(--grey);
+    border-radius: 14px;
+    padding: 30px;
+    text-align:center;
+    cursor:pointer;
+    margin-bottom: 22px;
+    transition: border-color .18s ease, background .18s ease;
+  }
+  .upload-zone:hover, .upload-zone.drag{
+    border-color: var(--yellow-deep);
+    background: var(--cream);
+  }
+  .upload-zone input{ display:none; }
+  .upload-zone .icon{ font-size:1.8rem; margin-bottom:8px; }
+  select, input[type=text]{
+    width:100%;
+    padding: 11px 14px;
+    border-radius:10px;
+    border: 1.5px solid var(--grey-light);
+    font-family: var(--font-body);
+    font-size:0.92rem;
+    margin-bottom:20px;
+  }
+  .admin-thumbs{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    margin-bottom: 20px;
+  }
+  .admin-thumb{
+    position:relative;
+    border-radius:10px;
+    overflow:hidden;
+    aspect-ratio:1;
+    border: 1.5px solid var(--grey-light);
+  }
+  .admin-thumb img{ width:100%; height:100%; object-fit:cover; }
+  .admin-thumb button{
+    position:absolute;
+    top:4px; right:4px;
+    background: var(--charcoal);
+    color:var(--white);
+    border:none;
+    width:22px; height:22px;
+    border-radius:50%;
+    font-size:0.75rem;
+    cursor:pointer;
+  }
+  .admin-actions{
+    display:flex;
+    gap:12px;
+    margin-top: 10px;
+  }
+  .admin-actions .btn{ flex:1; justify-content:center; padding:13px 20px; }
+  .admin-close{
+    position:absolute;
+    top:18px; right:18px;
+    background:none;
+    border:none;
+    font-size:1.3rem;
+    cursor:pointer;
+    color: var(--grey);
+  }
+  .admin-sheet{ position:relative; }
+  .demo-flag{
+    display:inline-block;
+    background: var(--cream);
+    border: 1px solid var(--yellow-deep);
+    color:#7a5e00;
+    font-size:0.75rem;
+    padding:8px 12px;
+    border-radius:10px;
+    margin-bottom:18px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px){
+    nav.links{
+      position: fixed;
+      top: 73px;
+      left:0; right:0;
+      background: var(--white);
+      flex-direction:column;
+      align-items:flex-start;
+      padding: 20px 28px 28px;
+      border-bottom: 1px solid var(--grey-light);
+      display:none;
+      gap:18px;
+    }
+    nav.links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .nav-cta{ width:100%; text-align:center; }
+
+    .hero-inner{ grid-template-columns: 1fr; }
+    .hero-badge-wrap{ order:-1; }
+    .hero-stat{ display:none; }
+
+    .service-grid{ grid-template-columns: 1fr 1fr; }
+    .gallery-grid{ grid-template-columns: 1fr 1fr; grid-auto-rows:160px; }
+    .gallery-item.big{ grid-column: span 2; grid-row: span 1; }
+
+    .about-grid{ grid-template-columns: 1fr; }
+    .contact-inner{ grid-template-columns: 1fr; }
+
+    .admin-thumbs{ grid-template-columns: repeat(3,1fr); }
+  }
+
+  @media (max-width: 520px){
+    .section{ padding: 64px 0; }
+    .service-grid{ grid-template-columns: 1fr; }
+    .gallery-grid{ grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="IconicStyle Interiors logo">
+      <span class="brand-text">
+        <strong>IconicStyle</strong>
+        <span>Interior Designing Co.</span>
+      </span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Get Your Quote</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Interiors, designed with intent</span>
+      <h1 class="hero-title">Spaces that feel<br><em>iconically</em> yours</h1>
+      <p class="lead">IconicStyle Interiors plans and builds homes and offices around how you actually live and work — from concept to the last cushion.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get Your Quote</a>
+        <a href="#gallery" class="btn btn-secondary">View Our Work</a>
+      </div>
+    </div>
+    <div class="hero-badge-wrap">
+      <div class="hero-circle">
+        <img src="logo.png" alt="IconicStyle badge">
+      </div>
+      <div class="hero-stat stat-1">
+        <strong>150+</strong>
+        Projects styled
+      </div>
+      <div class="hero-stat stat-2">
+        <strong>5★</strong>
+        Client rated
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-label">What we do</span>
+        <h2 class="section-title">Full-service interior design, under one roof</h2>
+      </div>
+      <p class="section-desc">From a single room refresh to a full home build-out, our team handles design, sourcing and execution.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">①</div>
+        <h3>Residential Interiors</h3>
+        <p>Homes, apartments and villas designed around your routines and taste.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">②</div>
+        <h3>Modular Kitchens</h3>
+        <p>Layouts built for real cooking, with finishes that last.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">③</div>
+        <h3>Office &amp; Commercial</h3>
+        <p>Workspaces and retail interiors that reflect your brand.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">④</div>
+        <h3>Renovation</h3>
+        <p>Refresh and restructure existing spaces without starting from zero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-label">Our work</span>
+        <h2 class="section-title">A look inside the spaces we've built</h2>
+      </div>
+      <p class="section-desc">More on our Instagram <a href="https://www.instagram.com/iconicstyle.in/" target="_blank" rel="noopener" style="color:var(--charcoal); font-weight:600; text-decoration:underline;">@iconicstyle.in</a></p>
+    </div>
+
+    <div class="gallery-toolbar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="living">Living Room</button>
+      <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+      <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+      <button class="filter-btn" data-filter="office">Office</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- populated by JS -->
+    </div>
+
+    <div class="gallery-cta">
+      <button class="btn btn-secondary" id="openAdminFromGallery">+ Add photos to this gallery</button>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="section-label">Why IconicStyle</span>
+      <h2>Design that's planned around how you'll actually use the space</h2>
+      <p>We start with a conversation, not a mood board. Every layout, material and finish is chosen to match your routine, budget and timeline.</p>
+      <ul class="about-points">
+        <li>Free in-home or virtual consultation before any commitment</li>
+        <li>Transparent quotes — no hidden material markups</li>
+        <li>One point of contact from design to final handover</li>
+        <li>Vendor and execution managed end-to-end by our team</li>
+      </ul>
+    </div>
+    <div class="about-figure">
+      <div class="about-figure-grid">
+        <div>
+          <div class="num">150+</div>
+          <div class="label">Projects completed</div>
+        </div>
+        <div>
+          <div class="num">10+</div>
+          <div class="label">Years experience</div>
+        </div>
+        <div>
+          <div class="num">98%</div>
+          <div class="label">On-time delivery</div>
+        </div>
+        <div>
+          <div class="num">5.0</div>
+          <div class="label">Average rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <h2>Let's plan your space.<br>Get a free quote today.</h2>
+      <p class="lead">Tell us about your project on WhatsApp or call directly — we usually respond within the day.</p>
+    </div>
+    <div class="contact-card">
+      <h3>Get Your Quote</h3>
+      <p>Tap below to message or call us right now.</p>
+      <div class="quote-actions">
+        <a class="quote-btn whatsapp" id="whatsappBtn" href="#" target="_blank" rel="noopener">
+          <span class="quote-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.3-1.1l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.4-5.9c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1.1 2.6c.1.2 1.8 2.8 4.4 3.8.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          </span>
+          <span>
+            WhatsApp Us
+            <small>+91 97100 36482 — tap to chat</small>
+          </span>
+        </a>
+        <a class="quote-btn call" id="callBtn" href="tel:+919710036482">
+          <span class="quote-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.6 21 3 13.4 3 4.1c0-.6.5-1.1 1.1-1.1H7.6c.6 0 1.1.5 1.1 1.1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+          </span>
+          <span>
+            Call Us
+            <small>+91 97100 36482 — tap to dial</small>
+          </span>
+        </a>
+      </div>
+      <a class="insta-line" href="https://www.instagram.com/iconicstyle.in/" target="_blank" rel="noopener">
+        📷 Follow us — <strong>@iconicstyle.in</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> IconicStyle Interiors. An Interior Designing Company.</span>
+    <a href="https://www.instagram.com/iconicstyle.in/" target="_blank" rel="noopener">Instagram @iconicstyle.in</a>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- Admin / Upload toggle -->
+<button class="admin-toggle" id="adminToggle">＋ Manage Photos</button>
+
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-sheet">
+    <button class="admin-close" id="adminClose">✕</button>
+    <h3>Manage gallery photos</h3>
+    <p class="note">Add the photos you want shown on the site.</p>
+    <div class="demo-flag">⚠ Demo mode: photos you add here are stored only in this browser (not shared online). Reloading after closing the tab may clear them. Ask your developer to connect permanent storage when ready.</div>
+
+    <label for="fileInput">Upload photos</label>
+    <div class="upload-zone" id="uploadZone">
+      <div class="icon">⬆</div>
+      <div><strong>Click to choose photos</strong> or drag them here</div>
+      <input type="file" id="fileInput" accept="image/*" multiple>
+    </div>
+
+    <label for="categorySelect">Category for new uploads</label>
+    <select id="categorySelect">
+      <option value="living">Living Room</option>
+      <option value="kitchen">Kitchen</option>
+      <option value="bedroom">Bedroom</option>
+      <option value="office">Office</option>
+    </select>
+
+    <label>Current photos (click ✕ to remove)</label>
+    <div class="admin-thumbs" id="adminThumbs"></div>
+
+    <div class="admin-actions">
+      <button class="btn btn-secondary" id="resetGallery" style="flex:0 0 auto;">Reset to defaults</button>
+      <button class="btn btn-primary" id="doneBtn" style="flex:1;">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---------- Year ----------
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- Mobile nav ----------
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', false);
+  }));
+
+  // ---------- WhatsApp link ----------
+  const phone = "919710036482";
+  document.getElementById('whatsappBtn').href =
+    `https://wa.me/${phone}?text=${encodeURIComponent("Hi IconicStyle, I'd like a quote for my interior project.")}`;
+
+  // ---------- Gallery data ----------
+  const DEFAULT_PHOTOS = [
+    { id: 'd1', category: 'living', big: true, src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80', label: 'Living Room' },
+    { id: 'd2', category: 'kitchen', big: false, src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=700&q=80', label: 'Kitchen' },
+    { id: 'd3', category: 'bedroom', big: false, src: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=700&q=80', label: 'Bedroom' },
+    { id: 'd4', category: 'office', big: false, src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80', label: 'Office' },
+    { id: 'd5', category: 'living', big: false, src: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=700&q=80', label: 'Living Room' },
+    { id: 'd6', category: 'kitchen', big: false, src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80', label: 'Kitchen' },
+  ];
+
+  const STORAGE_KEY = 'iconicstyle_gallery_photos';
+
+  function loadPhotos(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw) return DEFAULT_PHOTOS.slice();
+      const parsed = JSON.parse(raw);
+      if(!Array.isArray(parsed) || parsed.length === 0) return DEFAULT_PHOTOS.slice();
+      return parsed;
+    }catch(e){
+      return DEFAULT_PHOTOS.slice();
+    }
+  }
+
+  function savePhotos(photos){
+    try{
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(photos));
+    }catch(e){
+      alert('Could not save photos in this browser (storage may be full or disabled).');
+    }
+  }
+
+  let photos = loadPhotos();
+  let activeFilter = 'all';
+
+  const galleryGrid = document.getElementById('galleryGrid');
+  const adminThumbs = document.getElementById('adminThumbs');
+
+  function renderGallery(){
+    const filtered = activeFilter === 'all' ? photos : photos.filter(p => p.category === activeFilter);
+    galleryGrid.innerHTML = '';
+    if(filtered.length === 0){
+      galleryGrid.innerHTML = `<div class="gallery-empty">No photos in this category yet. Use "Manage Photos" to add some.</div>`;
+      return;
+    }
+    filtered.forEach((p, i) => {
+      const div = document.createElement('div');
+      div.className = 'gallery-item' + (p.big && i === 0 ? ' big' : '');
+      div.innerHTML = `<img src="${p.src}" alt="${p.label || 'Interior design photo'}" loading="lazy"><span class="tag">${labelFor(p.category)}</span>`;
+      div.addEventListener('click', () => openLightbox(p.src, p.label || ''));
+      galleryGrid.appendChild(div);
+    });
+  }
+
+  function labelFor(cat){
+    return { living:'Living Room', kitchen:'Kitchen', bedroom:'Bedroom', office:'Office' }[cat] || cat;
+  }
+
+  function renderAdminThumbs(){
+    adminThumbs.innerHTML = '';
+    photos.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'admin-thumb';
+      div.innerHTML = `<img src="${p.src}" alt=""><button data-id="${p.id}" aria-label="Remove photo">✕</button>`;
+      div.querySelector('button').addEventListener('click', () => {
+        photos = photos.filter(ph => ph.id !== p.id);
+        savePhotos(photos);
+        renderAdminThumbs();
+        renderGallery();
+      });
+      adminThumbs.appendChild(div);
+    });
+  }
+
+  // Filter buttons
+  document.getElementById('filterBar').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if(!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderGallery();
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  function openLightbox(src, alt){
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add('open');
+  }
+  document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('open'); });
+
+  // ---------- Admin panel ----------
+  const adminPanel = document.getElementById('adminPanel');
+  const adminToggle = document.getElementById('adminToggle');
+  const adminClose = document.getElementById('adminClose');
+  const doneBtn = document.getElementById('doneBtn');
+  const openAdminFromGallery = document.getElementById('openAdminFromGallery');
+
+  function openAdmin(){
+    renderAdminThumbs();
+    adminPanel.classList.add('open');
+  }
+  function closeAdmin(){ adminPanel.classList.remove('open'); }
+
+  adminToggle.addEventListener('click', openAdmin);
+  openAdminFromGallery.addEventListener('click', openAdmin);
+  adminClose.addEventListener('click', closeAdmin);
+  doneBtn.addEventListener('click', closeAdmin);
+  adminPanel.addEventListener('click', (e) => { if(e.target === adminPanel) closeAdmin(); });
+
+  // Upload zone
+  const uploadZone = document.getElementById('uploadZone');
+  const fileInput = document.getElementById('fileInput');
+  const categorySelect = document.getElementById('categorySelect');
+
+  uploadZone.addEventListener('click', () => fileInput.click());
+  uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('drag'); });
+  uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
+  uploadZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadZone.classList.remove('drag');
+    handleFiles(e.dataTransfer.files);
+  });
+  fileInput.addEventListener('change', () => handleFiles(fileInput.files));
+
+  function handleFiles(fileList){
+    const files = Array.from(fileList).filter(f => f.type.startsWith('image/'));
+    if(files.length === 0) return;
+    let remaining = files.length;
+    files.forEach(file => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        photos.unshift({
+          id: 'u' + Date.now() + Math.random().toString(36).slice(2,7),
+          category: categorySelect.value,
+          src: e.target.result,
+          label: labelFor(categorySelect.value)
+        });
+        remaining--;
+        if(remaining === 0){
+          savePhotos(photos);
+          renderAdminThumbs();
+          renderGallery();
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+    fileInput.value = '';
+  }
+
+  document.getElementById('resetGallery').addEventListener('click', () => {
+    if(confirm('Remove all uploaded photos and restore the default gallery?')){
+      photos = DEFAULT_PHOTOS.slice();
+      savePhotos(photos);
+      renderAdminThumbs();
+      renderGallery();
+    }
+  });
+
+  // Initial render
+  renderGallery();
+</script>
+
+</body>
+</html>
